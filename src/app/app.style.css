@@ -1,0 +1,197 @@
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  border: solid 10px #000;
+  min-height: 100vh;
+}
+
+.app-title {
+  background: #333333;
+  padding: 0.7rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 10px;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.8rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 0.7em;
+}
+.btn:focus {
+  outline: 1px solid transparent;
+  outline-offset: -4px;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn_primary {
+  background: #72c3dc;
+  border-color: #72c3dc;
+  cursor: pointer;
+  box-shadow: 0px 5px #2b8ead;
+}
+
+.btn_primary:hover,
+.btn_primary :focus {
+  opacity: 0.7;
+}
+
+.number-list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  padding: 15px;
+}
+.number-list .number-list__item {
+  padding: 10px;
+  background: #efefef;
+  margin: 2px 0;
+  transition: all 0.5s ease-out;
+}
+
+.number-list .number-list__item:nth-child(1),
+.number-list .number-list__item:nth-child(8) {
+  border-left: solid 7px #6f98a8;
+  background: linear-gradient(to right, #6f98a8 50%, #efefef 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.number-list .number-list__item:nth-child(2),
+.number-list .number-list__item:nth-child(4) {
+  border-left: solid 7px #2b8ead;
+  background: linear-gradient(to right, #2b8ead 50%, #efefef 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.number-list .number-list__item:nth-child(3),
+.number-list .number-list__item:nth-child(5),
+.number-list .number-list__item:nth-child(9) {
+  border-left: solid 7px #2f454e;
+  background: linear-gradient(to right, #2f454e 50%, #efefef 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.number-list .number-list__item:nth-child(6),
+.number-list .number-list__item:nth-child(7) {
+  border-left: solid 7px #bfbfbf;
+  background: linear-gradient(to right, #bfbfbf 50%, #efefef 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.number-list_active .number-list__item:active,
+.number-list_active .number-list__item:hover {
+  background-position: left bottom;
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+@media (min-width: 960px) {
+  .app-container {
+    border: none;
+    background: #efefef;
+  }
+  .app-title {
+    background: #fff;
+    color: #000;
+    border-bottom: 3px solid #bfbfbf;
+  }
+  .content-main {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+    background: none;
+  }
+
+  .number-list {
+    flex-flow: row wrap;
+    flex: 3;
+    padding: 0;
+  }
+  .btn-group {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 150px;
+  }
+
+  .number-list.number-list_not-mobile .number-list__item {
+    border: none;
+    flex: 1 1 auto;
+    width: 33%;
+    margin: 0;
+    text-align: center;
+    line-height: 200px;
+    font-size: 6em;
+    color: #fff;
+  }
+
+  .number-list .number-list__item:nth-child(1),
+  .number-list .number-list__item:nth-child(8) {
+    border-left: solid 7px #6f98a8;
+    background: #6f98a8;
+  }
+
+  .number-list .number-list__item:nth-child(2),
+  .number-list .number-list__item:nth-child(4) {
+    border-left: solid 7px #2b8ead;
+    background: #2b8ead;
+  }
+
+  .number-list .number-list__item:nth-child(3),
+  .number-list .number-list__item:nth-child(5),
+  .number-list .number-list__item:nth-child(9) {
+    border-left: solid 7px #2f454e;
+    background: #2f454e;
+  }
+
+  .number-list .number-list__item:nth-child(6),
+  .number-list .number-list__item:nth-child(7) {
+    border-left: solid 7px #bfbfbf;
+    background: #bfbfbf;
+  }
+
+  .number-list_active .number-list__item:active,
+  .number-list_active .number-list__item:hover {
+    opacity: 0.8;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}
