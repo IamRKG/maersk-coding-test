@@ -7,9 +7,10 @@
   --light-grey-color: #bfbfbf;
   --light-grey2-color: #efefef;
   --light-blue2-color: #72c3dc;
+  --padding-all-side-0dot625rem: 0.625rem;
 }
 html {
-  font-size: 100%;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 * {
@@ -19,16 +20,16 @@ html {
 }
 
 .app-container {
-  border: solid 10px var(--black-color);
+  border: solid 0.625rem var(--black-color);
   min-height: 100vh;
 }
 
 .app-title {
   background: #333333;
-  padding: 0.7rem;
+  padding: var(--padding-all-side-0dot625rem);
   text-align: center;
   color: var(--white-color);
-  font-size: 1.1em;
+  font-size: 1.3rem;
   font-weight: normal;
 }
 
@@ -36,7 +37,7 @@ html {
   display: flex;
   flex-direction: column;
   background: var(--white-color);
-  padding: 10px;
+  padding: var(--padding-all-side-0dot625rem);
 }
 
 .btn-group {
@@ -44,16 +45,16 @@ html {
 }
 
 .btn {
-  padding: 0.8rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
+  padding: 0.938rem 0.75rem;
+  border-radius: 0.625rem;
+  border: 0.063rem solid transparent;
   color: var(--white-color);
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.8rem;
 }
 .btn:focus {
-  outline: 1px solid transparent;
-  outline-offset: -4px;
+  outline: 0.063rem solid transparent;
+  outline-offset: -0.25rem;
 }
 
 .btn:active {
@@ -64,7 +65,7 @@ html {
   background: var(--light-blue2-color);
   border-color: var(--light-blue2-color);
   cursor: pointer;
-  box-shadow: 0px 5px var(--dark-blue-color);
+  box-shadow: 0px 0.313rem var(--dark-blue-color);
 }
 
 .btn_primary:hover,
@@ -76,18 +77,18 @@ html {
   display: flex;
   list-style: none;
   flex-direction: column;
-  padding: 15px;
+  padding: 0.938rem;
 }
 .number-list .number-list__item {
-  padding: 10px;
+  padding: var(--padding-all-side-0dot625rem);
   background: var(--light-grey2-color);
-  margin: 2px 0;
+  margin: 0.125rem 0;
   transition: all 0.5s ease-out;
 }
 
 .number-list .number-list__item:nth-child(1),
 .number-list .number-list__item:nth-child(8) {
-  border-left: solid 7px var(--light-blue-color);
+  border-left: solid 0.438rem var(--light-blue-color);
   background: linear-gradient(to right, #6f98a8 50%, #efefef 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -95,7 +96,7 @@ html {
 
 .number-list .number-list__item:nth-child(2),
 .number-list .number-list__item:nth-child(4) {
-  border-left: solid 7px var(--dark-blue-color);
+  border-left: solid 0.438rem var(--dark-blue-color);
   background: linear-gradient(to right, #2b8ead 50%, #efefef 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -104,7 +105,7 @@ html {
 .number-list .number-list__item:nth-child(3),
 .number-list .number-list__item:nth-child(5),
 .number-list .number-list__item:nth-child(9) {
-  border-left: solid 7px var(--dark-grey-color);
+  border-left: solid 0.438rem var(--dark-grey-color);
   background: linear-gradient(to right, #2f454e 50%, #efefef 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -112,7 +113,7 @@ html {
 
 .number-list .number-list__item:nth-child(6),
 .number-list .number-list__item:nth-child(7) {
-  border-left: solid 7px var(--light-grey-color);
+  border-left: solid 0.438rem var(--light-grey-color);
   background: linear-gradient(to right, #bfbfbf 50%, #efefef 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -126,10 +127,10 @@ html {
 
 .footer {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .app-container {
     border: none;
     background: var(--light-grey2-color);
@@ -137,7 +138,8 @@ html {
   .app-title {
     background: var(--white-color);
     color: var(--black-color);
-    border-bottom: 3px solid var(--light-grey-color);
+    border-bottom: 0.188rem solid var(--light-grey-color);
+    font-size: 1.2rem;
   }
   .content-main {
     flex-direction: row-reverse;
@@ -153,46 +155,43 @@ html {
   }
   .btn-group {
     flex: 1;
-    padding: 25px;
+    padding: 1.25rem 1.875rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-height: 150px;
+  }
+
+  .btn_primary {
+    margin: 0.75rem 0;
   }
 
   .number-list.number-list_not-mobile .number-list__item {
     border: none;
-    flex: 1 1 auto;
-    width: 33%;
+    flex: 0 1 33%;
     margin: 0;
     text-align: center;
-    line-height: 200px;
-    font-size: 6em;
+    padding: 2.5rem;
+    font-size: 6rem;
     color: var(--white-color);
   }
 
   .number-list .number-list__item:nth-child(1),
   .number-list .number-list__item:nth-child(8) {
-    border-left: solid 7px var(--light-blue-color);
     background: var(--light-blue-color);
   }
 
   .number-list .number-list__item:nth-child(2),
   .number-list .number-list__item:nth-child(4) {
-    border-left: solid 7px var(--dark-blue-color);
     background: var(--dark-blue-color);
   }
 
   .number-list .number-list__item:nth-child(3),
   .number-list .number-list__item:nth-child(5),
   .number-list .number-list__item:nth-child(9) {
-    border-left: solid 7px var(--dark-grey-color);
     background: var(--dark-grey-color);
   }
 
   .number-list .number-list__item:nth-child(6),
   .number-list .number-list__item:nth-child(7) {
-    border-left: solid 7px var(--light-grey-color);
     background: var(--light-grey-color);
   }
 
@@ -202,6 +201,6 @@ html {
   }
 
   .footer {
-    padding: 10px;
+    padding: var(--padding-all-side-0dot625rem);
   }
 }
